@@ -106,22 +106,23 @@ const Footer = () => {
                 {[
                   { icon: Linkedin, href: "#", label: "LinkedIn" },
                   { icon: Instagram, href: "#", label: "Instagram" },
-                  { icon: Facebook, href: "#", label: "Facebook" },
+                  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61575411725152", label: "Facebook" },
                   { icon: Twitter, href: "#", label: "Twitter" },
                 ].map((social) => {
                   const Icon = social.icon;
                   return (
-                    <Link
+                    <a
                       key={social.label}
-                      to={social.href}
+                      href={social.href}
                       aria-label={social.label}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group relative flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70 transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-white"
-                      onClick={handleNavigate}
                     >
                       <span className="absolute inset-0 rounded-full border border-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                       <span className="absolute inset-0 rounded-full bg-gradient-to-r from-accent/20 to-trust/20 opacity-0 blur-lg transition-opacity duration-300 group-hover:opacity-100" />
                       <Icon className="h-4 w-4" />
-                    </Link>
+                    </a>
                   );
                 })}
               </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -101,6 +101,24 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
+
+                {/* Facebook */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-accent/10 text-accent rounded-lg">
+                    <Facebook className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Facebook</h3>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61575411725152"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      Naixin Clothing Global
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -125,6 +143,18 @@ const Contact = () => {
                   <br />
                   <strong>22 January 2025</strong>
                 </p>
+              </div>
+              <div className="mt-4 pt-4 border-t border-border">
+                <p className="text-sm text-muted-foreground mb-2">Follow us:</p>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61575411725152"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors"
+                >
+                  <Facebook className="h-4 w-4" />
+                  Naixin Clothing Global
+                </a>
               </div>
             </div>
           </div>
